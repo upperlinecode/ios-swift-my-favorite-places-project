@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -20,44 +19,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jpn-fX-Sk2">
-                                <rect key="frame" x="180" y="90" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Jpn-fX-Sk2" secondAttribute="height" multiplier="1:1" id="wiB-Of-GVM"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="105" width="600" height="210"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20w-gZ-njE">
-                                <rect key="frame" x="0.0" y="32.5" width="600" height="32.5"/>
+                                <rect key="frame" x="0.0" y="47.5" width="600" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHd-DP-1xb">
-                                <rect key="frame" x="251" y="365" width="99" height="30"/>
+                                <rect key="frame" x="251" y="325" width="99" height="30"/>
                                 <state key="normal" title="Change Image"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Fact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYE-mA-jDz">
-                                <rect key="frame" x="60" y="430" width="480" height="157"/>
+                                <rect key="frame" x="60" y="365" width="480" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="qB3-Jk-bqb"/>
+                                    <constraint firstAttribute="height" constant="125" id="qB3-Jk-bqb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7d-u3-J6R">
+                                <rect key="frame" x="242" y="498" width="116" height="30"/>
+                                <state key="normal" title="Change Location"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jpn-fX-Sk2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77i-Pg-5hC"/>
                             <constraint firstItem="20w-gZ-njE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FeH-nJ-dxb"/>
                             <constraint firstItem="NHd-DP-1xb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IOW-Zb-AuW"/>
-                            <constraint firstItem="NHd-DP-1xb" firstAttribute="top" secondItem="Jpn-fX-Sk2" secondAttribute="bottom" constant="35" id="Igp-S7-1aF"/>
+                            <constraint firstItem="NHd-DP-1xb" firstAttribute="top" secondItem="Jpn-fX-Sk2" secondAttribute="bottom" constant="10" id="Igp-S7-1aF"/>
+                            <constraint firstItem="G7d-u3-J6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JZh-OF-LL2"/>
                             <constraint firstItem="PYE-mA-jDz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ksv-ab-vly"/>
                             <constraint firstItem="Jpn-fX-Sk2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="NSw-VC-xyy"/>
-                            <constraint firstItem="Jpn-fX-Sk2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="dJV-zO-2xA"/>
+                            <constraint firstItem="G7d-u3-J6R" firstAttribute="top" secondItem="PYE-mA-jDz" secondAttribute="bottom" constant="8" id="ZT9-rd-PhP"/>
+                            <constraint firstItem="Jpn-fX-Sk2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dJV-zO-2xA"/>
                             <constraint firstItem="PYE-mA-jDz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ebr-Fu-P2r"/>
                             <constraint firstItem="Jpn-fX-Sk2" firstAttribute="top" secondItem="20w-gZ-njE" secondAttribute="bottom" constant="25" id="fVd-Ii-5GZ"/>
-                            <constraint firstItem="PYE-mA-jDz" firstAttribute="top" secondItem="NHd-DP-1xb" secondAttribute="bottom" constant="35" id="gfD-SN-3Om"/>
+                            <constraint firstItem="PYE-mA-jDz" firstAttribute="top" secondItem="NHd-DP-1xb" secondAttribute="bottom" constant="10" id="gfD-SN-3Om"/>
                             <constraint firstItem="20w-gZ-njE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1T-YD-Neb"/>
+                            <constraint firstItem="Jpn-fX-Sk2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="vUT-mb-aI4"/>
                         </constraints>
                     </view>
                 </viewController>
