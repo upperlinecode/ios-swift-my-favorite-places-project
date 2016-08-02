@@ -5,5 +5,6 @@
 
 ##To Note:
 The following has been completed for you:
+
 1. Location struct
 2. Storyboard and constraints for the Details View Controller 
