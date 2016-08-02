@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qNY-Of-VnG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Details View Controller-->
+        <!--Details-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DetailsViewController" customModule="myFavoritePlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,51 +18,157 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jpn-fX-Sk2">
-                                <rect key="frame" x="180" y="90" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Jpn-fX-Sk2" secondAttribute="height" multiplier="1:1" id="wiB-Of-GVM"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jpn-fX-Sk2">
+                                <rect key="frame" x="0.0" y="120" width="600" height="180"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20w-gZ-njE">
-                                <rect key="frame" x="0.0" y="32.5" width="600" height="32.5"/>
+                                <rect key="frame" x="0.0" y="62.5" width="600" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHd-DP-1xb">
-                                <rect key="frame" x="251" y="365" width="99" height="30"/>
+                                <rect key="frame" x="251" y="305" width="99" height="30"/>
                                 <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="changeImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9I3-SU-3mD"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Fact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYE-mA-jDz">
-                                <rect key="frame" x="60" y="430" width="480" height="157"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Fact" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYE-mA-jDz">
+                                <rect key="frame" x="60" y="345" width="480" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="qB3-Jk-bqb"/>
+                                    <constraint firstAttribute="height" constant="120" id="qB3-Jk-bqb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmn-7o-Kce">
+                                <rect key="frame" x="242" y="499" width="116" height="30"/>
+                                <state key="normal" title="Change Location"/>
+                                <connections>
+                                    <action selector="changeLocationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7hk-7B-350"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jpn-fX-Sk2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77i-Pg-5hC"/>
                             <constraint firstItem="20w-gZ-njE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FeH-nJ-dxb"/>
                             <constraint firstItem="NHd-DP-1xb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IOW-Zb-AuW"/>
-                            <constraint firstItem="NHd-DP-1xb" firstAttribute="top" secondItem="Jpn-fX-Sk2" secondAttribute="bottom" constant="35" id="Igp-S7-1aF"/>
+                            <constraint firstItem="NHd-DP-1xb" firstAttribute="top" secondItem="Jpn-fX-Sk2" secondAttribute="bottom" constant="5" id="Igp-S7-1aF"/>
                             <constraint firstItem="PYE-mA-jDz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ksv-ab-vly"/>
+                            <constraint firstItem="Jpn-fX-Sk2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Mcd-fc-5IA"/>
+                            <constraint firstItem="kmn-7o-Kce" firstAttribute="centerX" secondItem="PYE-mA-jDz" secondAttribute="centerX" id="Mul-IM-DcL"/>
                             <constraint firstItem="Jpn-fX-Sk2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="NSw-VC-xyy"/>
-                            <constraint firstItem="Jpn-fX-Sk2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="dJV-zO-2xA"/>
+                            <constraint firstItem="kmn-7o-Kce" firstAttribute="top" secondItem="PYE-mA-jDz" secondAttribute="bottom" constant="34" id="Vd8-vg-PRZ"/>
+                            <constraint firstItem="Jpn-fX-Sk2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dJV-zO-2xA"/>
                             <constraint firstItem="PYE-mA-jDz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ebr-Fu-P2r"/>
                             <constraint firstItem="Jpn-fX-Sk2" firstAttribute="top" secondItem="20w-gZ-njE" secondAttribute="bottom" constant="25" id="fVd-Ii-5GZ"/>
-                            <constraint firstItem="PYE-mA-jDz" firstAttribute="top" secondItem="NHd-DP-1xb" secondAttribute="bottom" constant="35" id="gfD-SN-3Om"/>
+                            <constraint firstItem="PYE-mA-jDz" firstAttribute="top" secondItem="NHd-DP-1xb" secondAttribute="bottom" constant="10" id="gfD-SN-3Om"/>
                             <constraint firstItem="20w-gZ-njE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1T-YD-Neb"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Details" image="details-icon" selectedImage="details-icon" id="iSl-BR-JJv"/>
+                    <connections>
+                        <outlet property="funFactLabel" destination="PYE-mA-jDz" id="bMk-Vx-gdv"/>
+                        <outlet property="locationImageView" destination="Jpn-fX-Sk2" id="BFx-IZ-e5U"/>
+                        <outlet property="locationNameLabel" destination="20w-gZ-njE" id="K6I-nc-QeZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-33" y="1213"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ysG-no-kcx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qNY-Of-VnG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5b5-3n-BqS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Lsc-bj-Izb"/>
+                        <segue destination="z0C-aw-5qx" kind="relationship" relationship="viewControllers" id="cwd-1R-sno"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adO-yk-KAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="340" y="429"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="eYc-3D-qeG">
+            <objects>
+                <viewController id="z0C-aw-5qx" customClass="MapViewController" customModule="myFavoritePlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XdZ-en-XPp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Abp-aD-XKx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TOw-W2-SWG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sje-iF-Ydq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cda-uC-4P6">
+                                <rect key="frame" x="0.0" y="310" width="600" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2c9-q6-acy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Fact" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXe-Fb-TXU">
+                                <rect key="frame" x="60" y="363" width="480" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="7gT-pI-eMP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pC-lB-mcT">
+                                <rect key="frame" x="242" y="502" width="116" height="30"/>
+                                <state key="normal" title="Change Location"/>
+                                <connections>
+                                    <action selector="changeLocationTapped:" destination="z0C-aw-5qx" eventType="touchUpInside" id="Fpg-FU-kd7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sje-iF-Ydq" firstAttribute="centerY" secondItem="TOw-W2-SWG" secondAttribute="centerY" multiplier="0.5" id="0xh-jI-0Fy"/>
+                            <constraint firstItem="KXe-Fb-TXU" firstAttribute="centerX" secondItem="TOw-W2-SWG" secondAttribute="centerX" id="D0Z-Z9-k4n"/>
+                            <constraint firstItem="cda-uC-4P6" firstAttribute="centerX" secondItem="TOw-W2-SWG" secondAttribute="centerX" id="LAf-n0-aiB"/>
+                            <constraint firstItem="sje-iF-Ydq" firstAttribute="height" secondItem="TOw-W2-SWG" secondAttribute="height" multiplier="0.5" id="Qs1-u8-Fop"/>
+                            <constraint firstItem="sje-iF-Ydq" firstAttribute="width" secondItem="TOw-W2-SWG" secondAttribute="width" id="RIp-n2-Ue7"/>
+                            <constraint firstItem="cda-uC-4P6" firstAttribute="top" secondItem="sje-iF-Ydq" secondAttribute="bottom" constant="10" id="YGM-Sh-wdD"/>
+                            <constraint firstItem="sje-iF-Ydq" firstAttribute="centerX" secondItem="TOw-W2-SWG" secondAttribute="centerX" id="YsI-se-Xub"/>
+                            <constraint firstItem="KXe-Fb-TXU" firstAttribute="top" secondItem="cda-uC-4P6" secondAttribute="bottom" constant="8" id="as7-Qv-ywi"/>
+                            <constraint firstItem="4pC-lB-mcT" firstAttribute="centerX" secondItem="TOw-W2-SWG" secondAttribute="centerX" id="dqO-MY-JmN"/>
+                            <constraint firstItem="cda-uC-4P6" firstAttribute="width" secondItem="TOw-W2-SWG" secondAttribute="width" id="lA5-wP-ClH"/>
+                            <constraint firstItem="KXe-Fb-TXU" firstAttribute="width" secondItem="TOw-W2-SWG" secondAttribute="width" multiplier="0.8" id="wSv-qy-B87"/>
+                            <constraint firstItem="4pC-lB-mcT" firstAttribute="top" secondItem="KXe-Fb-TXU" secondAttribute="bottom" constant="14" id="wpr-KV-4bW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map-icon" selectedImage="map-icon" id="UOb-3q-nkk"/>
+                    <connections>
+                        <outlet property="funFactLabel" destination="KXe-Fb-TXU" id="7XN-Pz-8ox"/>
+                        <outlet property="locationNameLabel" destination="cda-uC-4P6" id="89B-qq-BlX"/>
+                        <outlet property="myMapView" destination="sje-iF-Ydq" id="bPN-Pf-pEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6z4-Ji-jN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="1213"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="details-icon" width="25" height="25"/>
+        <image name="map-icon" width="25" height="25"/>
+    </resources>
 </document>
